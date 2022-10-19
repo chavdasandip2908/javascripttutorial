@@ -1,0 +1,531 @@
+
+Date : 13-09-2022
+
+
+-statement and comment
+* Scope of variables :
+	1. Block 
+	2. Function
+	3. Globel
+
+	1. Block :
+		- There is two variable let and const that provide block scope.
+		- Variables declared inside a { } block cannot be accessed from outside the block:
+		
+		ex  of let :
+			{
+			  let x = 2;
+			  // x variable accesible here
+			}
+			// x variable can not accesible here
+		
+		ex of var :
+			{
+			  var x = 2;
+			  // x variable accesible here
+			}
+			// x variable also accesible here
+		
+	2. Function and local:
+
+		ex : 
+			function myFunction() {
+			  let carName = "Volvo";
+			  // code here CAN use carName
+			}
+
+			// code here can NOT use carName
+	
+	3. Globel : 
+			It accesible at globel level.
+		
+	
+ 
+	
+-javascript variables
+	-project
+	..................
+	var varNmae1 = 10;
+	var varNmae1 = 2;
+	var sum = varName1 + varName2;
+	console.log(sum);
+	------------------
+	let varNmae1 = 10;
+	let varNmae1 = 2;
+	let sum = varName1 + varName2;
+	console.log(sum);
+	let digit1=10;
+	<-- not a same -->
+	let Digit1=10;
+	------------------
+	const x=2;
+	console.log(x);
+-javascript operators :
+	-Arithmetic Operators
+	-Comparison Operators
+	-Logical Operators
+	-Assignment Operators
+	-Conditional Operators
+	-	 Ternary Operator
+	same as- x=x+2;
+		   x+=2;
+	power- x ** 2;
+----------------------------------
+* data type in javascript
+	1. Stirng 
+	2. Number
+	3. Array
+	4. Object
+	5. Undifined
+	6. Boolean
+
+	1. string : 
+		1.let x = "hello";
+		2.let x = 'hello';
+		3.let z = "hel'lo";
+			or
+		3.let z = 'hel/'lo';
+		4.let z = 'hel"lo';
+			or
+		4.let z = "hel/"lo";
+       <-output->
+		1.hello
+		2.hello
+		3.hel'lo
+		4.hel"lo
+	2. Number Data Type
+		ex- let x = 26 ;
+	3. Boolen Data Type(true or false)
+	4. Array Data Type
+		ex- let x = ["abc","bca","job"]; 
+	5. Object Data Type
+		ex- let man= {name:"tom",age:50};	
+	6. Undefined Data Type
+		ex- let x;
+--------------------------------------------------
+* Type Of operators
+		1. Logical
+		2. Comparison
+		3. 
+
+		ex- let x = typeof 10;
+         	  -console.log(typeof x);
+		ex- let x ="world";
+		    alert("hello" + x);
+				or
+		    alert(`hello ${x}`);
+		1. Comparison operator
+			==equal to
+			   ex-5==5->true
+				6==5->false
+				5=='5'->true
+			===equal value and equal type
+			   ex-5===5->true
+				6===5->false
+				5==='5'->false
+			!= not equal
+			   ex-8!=5->true
+				5!=5->false
+			!== not equal value or not equal type
+			   ex-5!==5->flase
+				5!=="5"->true
+				5!==8->true
+			> greater than
+			   ex-5>8->false
+			>= greater than or equal to
+			   ex-8>=8-> true
+			< less than
+			   ex-5<8->true
+			>= less than or equal to
+			   ex-8<=8-> true
+		2. Logical Operators
+			&& and
+				ex-(6<10&&6>1)->true
+				 (6<10&&6>1)->false
+			|| or
+				ex- (5==5 || 6==5) - true
+					(7==5 || 6==5) - false
+			! not
+				ex- !(6==5)	- true
+------------------------------------------------------
+* Conditions in javascript			
+
+	ex1.- let age=15;
+	
+		if(age<=18){
+			alert("you can vote!");
+		}
+	
+	ex2.- if(age<=18){
+			alert("you cannot vote!");
+		}else{
+			alert("you can vote!");
+		}	
+		
+	ex3. - let option = inloggedin == 1 ? "logout" : "login";
+			document.write(option);
+			
+	ex4. - 	let user;
+			user = "sandip";
+			alert(user ?? "guest user");
+			
+	ex5. - 		
+------------------------------------------------------
+
+* switch in javascript
+	
+	let input;
+	input=1;
+	
+	switch(input){
+		case 1:
+			document.write("Continue......");
+			break;
+		case "y":
+			document.write("Continue......");
+			break;
+		case "yes":
+			document.write("Continue......");
+			break;
+		case 0:
+			document.write("Continue......");
+			break;
+		case "n":
+			document.write("Continue......");
+			break;
+		case "no":
+			document.write("Continue......");
+			break;
+		default:
+			document.write("wroge input");			
+	}
+	<--or-->
+	 switch(input){
+		case 1:
+		case "y":
+		case "yes":
+			document.write("Continue......");
+			break;
+		case 0:
+		case "n":
+		case "no":
+			document.write("End......");
+			break;
+		default:
+			document.write("wroge input");			
+	}
+	
+----------------------------------------------------
+* loop in javascript
+  -> While Loop
+	ex1 -  	let count=1;
+	
+			while (count<=10){
+				document.write("sandip,,");
+				count++;
+			}
+
+	ex2. - let counter = 1;
+			let sum = 0 ;
+			while (counter <= 1000){
+				if(counter %2 == 0){
+					sum=sum+counter;
+				}
+				counter++;
+			}
+			document.write(sum);
+
+	-> Dowhile Loop
+		ex -let counter = 1;
+			do{
+				document.write("sandip,,");
+				counter++;
+			}while (counter <= 10);
+
+	-> for loop
+		ex - for(let counter=1; counter<=10; counter++){
+				document.write("sandip,");
+			}
+
+----------------------------------------------------
+
+* break,continue and nested loop
+	1.break
+	ex1.- 	for(let counter=1; counter<=10; counter++){
+				if(counter==5){
+						break;
+				}
+				document.write(counter);
+			}
+			
+	2. continue
+			for(let counter=1; counter<=10; counter++){
+				if(counter==5){
+						continue;
+				}
+				document.write(counter);
+			}
+			
+	3. nested lopp
+			for(let counter=1; counter<=10; counter++){
+				document.write(counter);
+				document.write('<br>');
+				for(let counter2=1 ; counter2<3 ; counter2++){
+						document.write("sandip");
+						document.write('<br>');
+				}
+			}
+	
+    	
+			
+---------------------------------------------------------
+
+* Alert,Prompt and Confirm	
+
+	1. Alert
+		ex1.- 	alert('welcome');
+	
+	2. Prompt
+		ex -let age=prompt('Enter your age');
+			if (age!=null){
+				document.write('your age is ',age);
+				document.write('<br>');
+				document.write(`your age is ${age}.`);
+			}		
+	3. Confirm
+		ex -let responce = confirm('are you sure ,you want to delete ? ');
+			if(responce){
+				document.write('deleted');
+			}else{
+				document.write('not deleted'); 
+			}
+	
+----------------------------------------------------------			
+				
+* Type Conversion	
+
+	1. Strig()
+	2. Number()
+	3. Boolean()
+
+
+	1. String
+		ex1.let type = 4;
+			console.log(type);
+			console.log(typeof type);
+			let newType = String(type);
+			console.log(newType);
+			console.log(typeof newType);
+			
+		ex1.let type = false;
+			console.log(type);
+			console.log(typeof type);
+			let newType = String(type);
+			console.log(newType);
+			console.log(typeof newType);	
+
+	2. Number
+		ex1.let type = "hello";
+			console.log(type);
+			console.log(typeof type);
+			let newType = Number(type);
+			console.log(newType);
+			console.log(typeof newType);
+
+		ex1.let type = false;
+			console.log(type);
+			console.log(typeof type);
+			let newType = Number(type);
+			console.log(newType);
+			console.log(typeof newType);
+	3. Boolean
+		ex1.let type = 0;
+			console.log(type);
+			console.log(typeof type);
+			let newType = Boolean(type);
+			console.log(newType);
+			console.log(typeof newType);
+		
+		ex2.let type = "sandip";
+			console.log(type);
+			console.log(typeof type);
+			let newType = Boolean(type);
+			console.log(newType);
+			console.log(typeof newType);
+
+------------------------------------------------------------------------
+
+* String Manipulation
+
+	-> Templates Literals
+		ex-	let name = "sandip"
+			let greet = `hii ${name}`;
+			console.log(greet);
+
+	->	Manipulate
+		\n,\t,\\,\",\'.\(etc...)......
+			let str = "sandip \n \t chavda ";
+			console.log(str);
+			
+	-> Length
+		ex- let str ="sandip chavda";
+			console.log(str.length);
+
+	-> Fiend Particular 
+		ex-	let str = "chavda sandip";
+			console.log(str[3]);
+			
+	-> Join Two String 
+		ex- let str = "sandip";
+			let str2 = "chavda";
+			console.log(str + str2);  <-or->  console.log(str +" "+ str2); 
+			<-or->
+			let str3 = str.concat(" ",str2);
+
+	-> Compare String
+		ex- let str = "sandip chavda";
+			if ("sandip chavda" == str){
+				console.log("equal");
+			}else{
+				console.log("not equal");
+			}
+
+	-> Substring 
+		ex- let str = "This is javascript tutorial. It is a good tutorial. ";
+			let str2 = str.substr(8,19);
+			console.log(str2);
+			
+			<-or->
+			
+			let str = "This is javascript tutorial. It is a good tutorial. ";
+			let str2 = str.substring(8,26);
+			console.log(str2);
+
+	-> stating position
+			ex- let str = "This is javascript tutorial. It is a good tutorial. ";
+				let position = str.indexOf("is",6);
+				console.log(position);
+				
+	-> Remove Extra Space	
+			ex- let str = "  This is javascript tutorial. It is a good tutorial.   ";
+				let str2 = str.trim();
+				console.log(str);
+				console.log(str2);
+				<-or->
+			  - let str = "  This is javascript tutorial. It is a good tutorial.   ";
+				let str2 = str.trimStart();
+				console.log(str);
+				console.log(str2);
+				<-or->
+			  -	let str = "  This is javascript tutorial. It is a good tutorial.   ";
+				let str2 = str.trimEnd();
+				console.log(str);
+				console.log(str2);
+		
+	-> Uppercase and Lowercase		
+				
+			ex- let str = "  This is javascript tutorial. It is a good tutorial.   ";
+				let str2 = str.toUpperCase();
+				console.log(str);
+				console.log(str2);	
+			ex- let str = "  This is javascript tutorial. It is a good tutorial.   ";
+				let str2 = str.toLowerCase();
+				console.log(str);
+				console.log(str2);		
+				
+	-> Replace String
+		
+		ex -let str = "  This is javascript tutorial. It is a good tutorial.   ";
+			let str2 = str.replace('good','best');
+			console.log(str);
+			console.log(str2);
+				
+	-> Find	String
+
+		ex -let str = "  This is javascript tutorial. It is a good tutorial.   ";
+			let str2 = str.includes('javascript');
+			console.log(str);
+			console.log(str2);
+			
+			
+--------------------------------------------------------------------------------------
+
+* Array
+
+	-> How to Create Array ?
+		ex- let book = ["math","physics","bio","computer"];
+			let mark = [72,85,75,80,89];
+			book[2] = "english"; // Update Array Values...
+			console.log(book[2]);
+			console.log(mark[2]);
+			
+	-> Operations On Array.
+		
+		- Length
+			ex- let book = ["math","physics","bio","computer"];
+				console.log(book.length);
+
+		- Add Values
+			ex1.let book = ["math","physics","bio","computer"];  	// End part Insert Values
+				book.push("hindi");
+				console.log(book);
+				
+			ex2.let book = ["math","physics","bio","computer"];		// Start part Insert Values
+				book.unshift("hindi");
+				console.log(book);	
+
+		- Delete Values
+		
+			ex1.let book = ["math","physics","bio","computer"];		// End part Deleted 
+				book.pop();
+				console.log(book);	
+
+			ex1.let book = ["math","physics","bio","computer"];		// Start part Deleted 
+				book.shift();
+				console.log(book);	
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
