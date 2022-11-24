@@ -12,14 +12,14 @@ Date : 13-09-2022
 		- There is two variable let and const that provide block scope.
 		- Variables declared inside a { } block cannot be accessed from outside the block:
 		
-		ex  of let :
+		example  of let :
 			{
 			  let x = 2;
 			  // x variable accesible here
 			}
 			// x variable can not accesible here
 		
-		ex of var :
+		example of var :
 			{
 			  var x = 2;
 			  // x variable accesible here
@@ -480,42 +480,406 @@ Date : 13-09-2022
 				book.pop();
 				console.log(book);	
 
-			ex1.let book = ["math","physics","bio","computer"];		// Start part Deleted 
+			ex2.let book = ["math","physics","bio","computer"];		// Start part Deleted 
 				book.shift();
 				console.log(book);	
 				
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+			ex3.let book = ["math","physics","bio","computer"];				
+				book.splice(1,2); // 1 is a Stating Position and 2 is a Ending Position
+				console.log(book);		
 			
+			ex4.let book = ["math","physics","bio","computer"];				
+				book=[];  
+				// <-or-> 
+				book.length = 0 ; // balnk Array 
+				console.log(book);	
+		
+		- Position 
+		
+			ex1.let book = ["math","physics","bio","computer"];				
+				book.indexOf("bio"); 
+				console.log(book);	
+
+		- Check Array 
+			ex1.let book = ["math","physics","bio","computer"];  //Arsray				
+				let book = "math"; //variable
+				console.log(Array.isArray(book));
+
+		- Convert : Variable to Array 
+			
+			ex1.let text =  "This is Random Text"	// Variable		
+				let wordarray = text.split(" ") ; // Array
+				console.log(wordarray);
+
+		- Convert : Aerray to Variable
+		
+			ex1.let book = ["math","physics","bio","computer"];  //Array
+				let wordarray = book.join(" ") ; // Variable
+				console.log(wordarray);
 				
+		- Join Multiple Array 
+ 
+			ex1.let book = ["math","physics","bio","computer"];  
+				let book2 = ["hindi","english"];  
+				let book3 = ["telgu","punjabi"];  
+				let newBook = book.concat(book2,book3) ; 
+				console.log(newBook); 
+
+		- Multiple Deamance Array
+			
+			ex1.let bookWithPages = [
+										["math","300"],
+										["physics","500"],
+										["bio","200"]
+									];  
+				console.log(bookWithPages[0][1]); // "300"
+				console.log(bookWithPages[0][0]); // "math"
+				console.log(bookWithPages[1][1]); // "500"
+				console.log(bookWithPages[2][0]); // "bio"
+
+		- Step By Step Print Array.
+
+			ex1.let book = ["math","physics","bio","computer"]; 
+				let booklength = book.length;
+				for(i=0;i<booklength ; i++){
+					console.log(`Element ${i} is ${book[i]} \n`);
+				}
+			ex2.let book = ["math","physics","bio","computer"]; 
+				book.forEach(function_name);
+				function function_name(array_value){
+					console.log(array_value);
+				}
+
+--------------------------------------------------------------------------------------
+
+ * Function
+ 
+   -> How to Create a Function.
+		
+		ex- function MulTable(){
+			for (i=1; i<=10; i++){
+				document.write(`2 x ${i} = ${2*i}\n`);
+				}
+			}
+			MulTable();
+
+--------------------------------------------------------------------------------------
+
+ * Parameters and Arguments
+ 
+	-> One Parameters and Arguments
+ 
+			ex- function MulTable(num){				// Parameter is num.
+				for (i=1; i<=10; i++){
+					document.write(`${num} x ${i} = ${num*i}`);
+					document.write("<br>");
+					}
+				}
+				MulTable(1);			// Argument is 1.
+				document.write("<br>");
+				MulTable(2);			// Argument is 2.
+				document.write("<br>");
+				MulTable(3);			// Argument is 3.
+				document.write("<br>");
+				MulTable(4);			// Argument is 4.
+				document.write("<br>");
+				MulTable(5);			// Argument is 5.
+				document.write("<br>");
+				MulTable(6);			// Argument is 6.
+				document.write("<br>");
+				MulTable(7);			// Argument is 7.
+				document.write("<br>");
+				MulTable(8);			// Argument is 8.
+				document.write("<br>");
+				MulTable(9);			// Argument is 9.
+				document.write("<br>");
+				MulTable(10);			// Argument is 10.
+
+	-> Multiple Parameters and Arguments.
+	
+		ex- function add(num1,num2){				// Parameter is num1 , num2 .
+                    document.write(`${num1} + ${num2} = ${num1+num2}<br>`);
+                    document.write(`${num1} - ${num2} = ${num1-num2}<br>`);
+                    document.write(`${num1} x ${num2} = ${num1*num2}<br>`);
+                    document.write(`${num1} / ${num2} = ${num1/num2}<br>`); 
+                }
+				add(12,15); 			// Argument is 12 and 15.
+				add(1000,905); 			// Argument is 1000 and 905.
+				add(12051,13157); 		// Argument is 12051 and 13157.
+
+-------------------------------------------------------------------------------------
+
+ * The Argument Object
+ 
+	- Find one Argument 
+		ex- function add(){
+				console.log(arguments[1]);
+			}
+			add(1,7,9);  // output is 7
+
+	- Add and Min 
+	
+		ex- function add(){
+
+                if(arguments.length == 0){
+                    console.log("No Parameter Passed !");
+                } else{
+                    let sum=0;
+                    let min=0;
+                    for(let i = 0; i<arguments.length; i ++){
+                        sum=sum+arguments[i];
+                    }
+                    for(let i = 0; i<arguments.length; i ++){
+                        min=min-arguments[i];
+                    }
+
+                    console.log(sum);
+                    console.log(min);
+                }
+            }
+            add(10,10,10);
+            add(15,85,29);
+            add(42,23,85);
+			
+			let additon = add; // add Function and addition variable work is same .
+			
+			
+---------------------------------------------------------------------------------------
+
+ * Return in Function
+	
+	ex- function add(a , b){
+        return a + b ;
+        // console.log(a + b);   	//	Not Wrorking
+        // document.write(a + b);	//	Not Wrorking
+        }
+        let store=add(5,6);
+        document.write(store);
+		
+---------------------------------------------------------------------------------------
+
+ * Global Variable vs Local Variable 
+ 
+	ex1. let car='audi';     // Global Variable
+		function add(){
+			let result = 33 ;   // Local Variable
+			console.log(result);
+			console.log(car);
+		}
+		add();
+		console.log(car);
 				
-				
+	ex2. function sum(){
+			let result = 33 ;   // Local Variable
+			console.log(result);
+		}
+		function add(){
+			let result = 53 ;   // Local Variable
+			console.log(result);
+		}
+		sum();
+		add();	
+
+---------------------------------------------------------------------------------------
+
+ * Anonymous Function
+
+	ex1.let show = function (){		// Function Expression
+			console.log('hello');
+		};
+		show();
+		
+	ex2. setTimeout(function(){
+            console.log('hello');
+        },2000);	
+		
+----------------------------------------------------------------------------------------
+
+ * Immediately Invoked Function		
+	
+	ex -(function (){		
+			console.log('hello');
+		})();
+		
+------------------------------------------------------------------------------------
+
+ * Properties in Object 
+ 
+	=> How to Object?
+	   -let person = {
+				firstName : 'sandip',
+				lastName : 'chavda'
+		}
+		console.log(person);
+		console.log(person.firstName);
+		console.log(person.lastName);
+		console.log(person['firstName']);
+		console.log(person['lastName']);
+		
+	=> How to Create and Modify Object Values
+		person.firstName = 'sandipbhai';
+		person.age = 22;
+		
+	=> How to Delete object Values
+		delete person.firstName;
+		
+	=> How to Check undefined object 
+		console.log('firstName' in person);
+
+	=> How to Find all object Values Step By Step.
+		ex- for (let key in person){
+				console.log (key +": "+person[key]);
+			}
+
+------------------------------------------------------------------------------------
+
+ * Methods in Object
+	
+	
+            let person = {
+				firstName : 'sandip',
+				lastName : 'chavda',
+                sayHello : function(){
+                    console.log("hello3 !");	//  method 3.
+                }
+                sayHello  (){
+                    console.log("hello4 !");	//  method 4.
+                }
+            }
+
+            person.sayHello = function (){		// method 1.
+                console.log("hello1 !");
+            }
+            
+            function greet(){
+                console.log("hello2 !");		//  method 2.
+            }
+            person.sayHello = greet;
+            person.sayHello();
+		
+------------------------------------------------------------------------------------
+
+ * "this" in object
+
+
+	let person ={
+		firstName : "sandip",
+		lastName : "chavda" ,
+		sayHello (){
+			console.log("hello ! I am " + person.firstName + " and i have a " +car.brand + " car"); 
+			console.log("hello ! I am " + this.firstName + " and i have a " +car.brand + " car"); 
+        }
+	}
+	let car ={
+		brand : "tata",
+		model : "safari"
+	}
+	person.sayHello();
+	
+------------------------------------------------------------------------------------
+
+ * Math object
+
+	1. console.log(math.PI);
+	2. console.log(math.E);
+	3. var num = Math.round(4.7);
+	   console.log(num);	
+	4. var num = Math.ceil(4.7);
+	   console.log(num);
+	5. var num = Math.floor(4.7);
+	   console.log(num);
+	6. var num = Math.trunc(4.7);
+	   console.log(num);
+	7. var num = Math.pow(2 , 3);
+	   console.log(num);
+	8. var num = Math.sqrt(100);
+	   console.log(num);
+	9. var num = Math.max(10,285,102,45,25,68);	
+	   console.log(num);
+	10.var num = Math.min(10,285,102,45,25,68);
+	   console.log(num);
+	   
+------------------------------------------------------------------------------------
+
+ * Random Number 
+
+	1. let randomNumber = Math.random();  // 0 to 1
+	2. let randomNumber = Math.random() * 10;  // 0 to 9
+	3. let randomNumber = Math.floor( Math.random() * 10);  // 0 to 9
+	4. let randomNumber = Math.floor( Math.random() * 11);  // 0 to 10
+	5. let randomNumber = Math.floor( Math.random() * 100);  // 0 to 99
+	6. let randomNumber = Math.floor( Math.random() * 101);  // 0 to 100
+	7. let randomNumber = Math.floor( Math.random() * 10) + 1 ;  // 1 to 10
+	8. function getRandom (min , max){
+			let randomNumber = Math.floor( Math.random() * (max - min)) + min; 
+			return randomNumber;
+		}
+
+		console.log(getRandom(10,20));
+
+
+-----------------------------------------------------------------------------------
+
+ * Date Object
+ 
+		1. let x = new Date ();  // store current date. 
+		  console.log(x);
+
+		2. let date = new Date ("october 13,2018 11:12:33"); 
+		   console.log(date.getTime()); 
+		   console.log(date.getSeconds()); 
+		   console.log(date.getMinutes());
+		   console.log(date.getHours());
+		   console.log(date.getDate());
+		   console.log(date.getMonth());
+		   console.log(date.getFullYeas());
+		   console.log(date.getDay());
+
+		3. Update Date 
+		  ->let date = new Date ("october 13,2018 11:12:33");  
+            date.setDate(25);
+            date.setMonth(5);
+            date.setFullYear(2022);
+            date.setHours(10);
+            date.setMinutes(25);
+            date.setSeconds(08);
+            console.log(date); 
+
+		4.  let date = new Date ("october 13,2018 11:12:33");   
+        	date.setDate( date.getDate() + 50);
+            console.log(date); 
+
+			let date = new Date (2006,11,12+50,10,12,55); 
+
+		5. Two Data Compare .
+		
+			let date1 = new Date ("october 13,2018 11:12:33");  
+			let date2 = new Date (2015,04,16,12,45,33);  
+			
+			if (date1<date2){
+				console.log("Entered date is Past date")
+			}
+			else if(date1>date2){
+				console.log("Entered date is future date")
+			}
+			else{
+				console.log("Entered date Same Date")
+			}
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+		
 				
 				
 				

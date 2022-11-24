@@ -1,0 +1,124 @@
+
+
+   <= JavaScript Events =>
+
+	* Mouse Events
+			1. onclick
+				-> When mouse click on an element.
+			2. onmouseover 
+				-> When the cursor of the mouse comes over the element.
+			3. onmouseout
+				-> When the cursor of the mouse leaves an element.
+			4. onmousedown
+				-> When the mouse button is pressed over the element.
+			5. onmouseup
+				-> When the mouse button is released over the element.
+			6. onmousemove
+				-> When the mouse movement takes place.
+				
+	* Keybord Envents		
+			1. onkeydown & onkeyup
+				-> When the user press and then release the key.
+
+	* Form Events		
+			1. onfocus
+				-> When the user focuses on an element.
+			2. onsubmit
+				-> When the user submits the form.
+			3. onblur
+				-> When the focus is away from a form element.
+			4. onchange
+				-> When the user modifies or changes the value of a form element.
+
+	* Window/Document Events
+			1. onload
+				-> When the browser finishes the loading of the page.
+			2. onupload
+				-> When the visitor leaves the current webpage, the browser unloads it.
+			3. onresize
+				-> When the visitor resizes the window of the browser.
+ 
+			
+			
+	<= Jvascript Events Example =>		
+			
+		1. 	<html>  
+				<head> Javascript Events </head>  
+				<body>  
+					<script language="Javascript" type="text/Javascript">  
+						<!--  
+						function clickevent()  
+						{  
+							document.write("This is JavaTpoint");  
+						}  
+						//-->  
+					</script>  
+					<form>  
+						<input type="button" onclick="clickevent()" value="Who's this?"/>  
+					</form>  
+				</body>  
+			</html>  	
+			
+		2.  <html>
+				<head>
+					<h1> Javascript Events </h1>
+				</head>
+				<body>
+					<script language="Javascript" type="text/Javascript">
+					<!--  
+					function mouseoverevent()  
+					{  
+						alert("This is JavaTpoint");  
+					}  
+					//-->
+				</script>
+					<p onmouseover="mouseoverevent()"> Keep cursor over me</p>
+				</body>
+			</html>	
+		3. 	<html>  
+				<head> Javascript Events</head>  
+				<body>  
+					<h2> Enter something here</h2>  
+					<input type="text" id="input1" onfocus="focusevent()"/>  
+				<script>  
+				<!--  
+					function focusevent()  
+					{  
+						document.getElementById("input1").style.background=" aqua";  
+					}  
+				//-->  
+				</script>  
+				</body>  
+			</html>
+
+		4.	<html>  
+				<head> Javascript Events</head>  
+				<body>  
+					<h2> Enter something here</h2>  
+						<input type="text" id="input1" onkeydown="keydownevent()"/>  
+					<script>  
+					<!--  
+						function keydownevent()  
+						{  
+							document.getElementById("input1");  
+							alert("Pressed a key");  
+						}  
+					//-->  
+					</script>  
+				</body>  
+			</html>  		
+			
+			
+		5. 	<html>  
+				<head>Javascript Events</head>  
+					</br>  
+				<body onload="window.alert('Page successfully loaded');">  
+				<script>  
+				<!--  
+					document.write("The page is loaded successfully");  
+				//-->  
+				</script>  
+				</body>  
+			</html> 
+
+	<= more information https://www.w3schools.com/js/js_events_examples.asp	=> 		
