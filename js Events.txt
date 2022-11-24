@@ -118,7 +118,7 @@
 					document.write("The page is loaded successfully");  
 				//-->  
 				</script>  
-				</body>  
-			</html> 
+				</body>      
+			</html>     
 
-	<= more information https://www.w3schools.com/js/js_events_examples.asp	=> 		
+	<= more information shttps://www.w3schools.com/js/js_events_examples.asp	=> 		

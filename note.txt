@@ -20,7 +20,7 @@ Date : 13-09-2022
 			// x variable can not accesible here
 		
 		example of var :
-			{
+			{  
 			  var x = 2;
 			  // x variable accesible here
 			}
@@ -762,7 +762,7 @@ Date : 13-09-2022
  * "this" in object
 
 
-	let person ={
+	let person ={      
 		firstName : "sandip",
 		lastName : "chavda" ,
 		sayHello (){
