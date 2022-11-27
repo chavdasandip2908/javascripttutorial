@@ -1,19 +1,86 @@
-
-
 <!DOCTYPE html>
 <html>
-    <head>
-        <style>
-            body{
-                background-color:rgb(75, 75, 75);
-            }
-        </style>
-    </head>
+
+<head>
+    <style>
+        body {
+            /* background-color: rgba(194, 222, 12, 0.666); */
+            background-image: url(pngtree-minimal-cylinder-podium-scene-with-geometrical-forms-image_435987.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        .headding {
+            text-align: center;
+            background-color: rgba(213, 93, 205, 0.500);
+            border: 2px solid black;
+            border-radius: 5px;
+            width: 40%;
+            margin: 5px auto 5px auto;
+            padding: 15px 5px;
+        }
+
+        .bodypart {
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: rgb(213, 93, 205, 0.500);
+            width: 40%;
+            margin: auto;
+            padding: 15px 0px 15px 10px;
+        }
+
+        .inputbox {
+            background-color: rgba(244, 163, 239, 0.5);
+            border: 1px solid black;
+            border-radius: 2px;
+            margin: 5px 0px;
+        }
+
+        #fname {
+            width: 80%;
+        }
+
+        #lname {
+            width: 80.5%;
+        }
+
+        #number {
+            width: 83.5%;
+        }
+
+        #subbut {
+            background-color: rgba(244, 163, 239, 0.5);
+            border: 1px solid black;
+            border-radius: 2px;
+            width: auto;
+            margin: auto;
+            text-align: center;
+        }
+        #abc{
+            text-align: center;
+        }
+    </style>
+</head>
 
 <body>
-    <label for="FistName">First Name</label>
-    <input type="text" id="fname">
-    <script></script>
+    <h2 class="headding ">Sign in </h2>
+    <div class="bodypart">
+
+        <label for="FistName">First Name :</label>
+        <input type="text" name="FirstName" id="fname" class="inputbox" onchange=""><br>
+
+        <label for="LastName">Last Name : </label>
+        <input type="text" name="LastName" id="lname" class="inputbox" onchange=""><br>
+
+        <label for="number">Number :</label>
+        <input type="number" id="number" class="inputbox"><br>
+        <div id="abc">
+            <input type="submit" id="subbut">
+        </div>
+    </div>
+    <script>
+
+    </script>
 </body>
-      
+
 </html>

@@ -866,6 +866,44 @@ Date : 13-09-2022
 				console.log("Entered date Same Date")
 			}
 
+------------------------------------------------------------------------------------------------
+
+ * insert AdjacentHTML
+	
+	<!-- beforebegin -->
+	<div id="intro">
+		<!-- afterbegin -->
+		<h2>Heading</h2>
+		<p>This is a p tag</p>
+		<!-- beforeend -->
+	</div>
+	<!-- afterend -->
+
+	let elm = document.getElementById("intro");
+	let insertvalue = "<h1>HELLO</h1>";
+	elm.insertAdjacentHTML('beforebegin',insertvalue);    	//or
+	elm.insertAdjacentHTML('afterbegin',insertvalue);		//or
+	elm.insertAdjacentHTML('beforeend',insertvalue);		//or
+	elm.insertAdjacentHTML('afterend',insertvalue);			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

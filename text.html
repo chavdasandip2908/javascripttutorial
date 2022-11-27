@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(70, 70, 151, 0.93);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .circle{
+            height: 450px;
+            width: 450px;
+            background-color:rgba(70, 70, 151, 0.93);
+            border-radius: 50%;
+            border: 30px solid white;
+        }
+        .hand {
+            width:50%;
+            height:6px;
+            /* background:black; */
+            position: absolute;
+            top:50%;
+            transform-origin: 100%;
+            transform: rotate(90deg);
+            transition: all 0.05s;
+            transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+        }
+        .hour-hand{
+            background-color: aqua;
+            width: 16.5 vw;
+            height: 1vh;
+            border-radius: 10px;
+        }
+        .min-hand{
+            background-color: aquamarine;
+            width: 16.5 vw;
+            height: 0.5vh;
+            border-radius: 10px;
+        }
+        .second-hand{
+            background-color: black;
+            width: 16.5 vw;
+            height: 0.3vh;
+            border-radius: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container" >
+        <div class="circle ">
+            <div class="hand hour-hand"></div>
+            <div class="hand min-hand"></div>
+            <div class="hand second-hand"></div>
+        </div>
+    </div>
+</body>
+</html>
